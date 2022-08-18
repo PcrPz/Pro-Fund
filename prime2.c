@@ -2,20 +2,20 @@
 int main()
 {
     int x, y, z;
-    printf("Insert Number :");
-    scanf("%d", x);
+    printf("Insert Number : ");
+    scanf("%d", &x);
     for (y = 2; y <= x; y++)
     {
         if (x % y == 0)
         {
             if (y == x)
             {
-                printf("prime number");
+                printf("Prime Number");
         
             }
             else
             {
-                printf("not prime number");
+                printf("Not Prime Number");
                 break;
             }
         }

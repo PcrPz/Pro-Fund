@@ -2,7 +2,7 @@
 int main()
 {
     int x, y, a;
-    printf("Please Enter Number To Check :");
+    printf("Please Enter Number To Check : ");
     scanf("%d", &x);
 
     for (y = 1; y <= x; y++)
