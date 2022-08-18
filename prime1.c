@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main()
-{  printf("Please Enter Number To Check :");
+{
     int x, y, a;
     printf("Please Enter Number To Check :");
     scanf("%d", &x);
