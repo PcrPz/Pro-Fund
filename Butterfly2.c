@@ -6,7 +6,6 @@ int main()
     scanf("%d", &x);
     n = (2 * x) - 1;
     int r = n - 1;
-
     for (i = 0; i < x; i++)
     {
         for (j = 0; j < n; j++)
@@ -24,7 +23,7 @@ int main()
         r--;
         printf("\n");
     }
-    for (i = 0; i < x-1; i++)
+    for (i = 0; i < x - 1; i++)
     {
         for (j = 0; j < n; j++)
         {

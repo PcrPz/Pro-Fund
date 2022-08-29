@@ -25,7 +25,7 @@ int main()
         n = (2 * x) - 1;
         for (j = 0; j < n; j++)
         {
-            if (x-i>j || x-i>=n-j)
+            if (x - i > j || x - i >= n - j)
             {
                 printf("*");
             }
