@@ -12,6 +12,7 @@ int main()
         {
             sum = sum*i;
         }
+        printf("Value is ");
         printf("%d",sum);
     }
     else

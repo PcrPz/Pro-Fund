@@ -2,6 +2,7 @@
 int main()
 {
     int i, x, fac=1;
+    printf("Factorial Program\n");
     printf("Enter Integer :");
     scanf("%d", &x);
 
@@ -9,6 +10,7 @@ int main()
     {
         fac *= (x - i);
     }
+    printf("Value is ");
     printf("%d", fac);
 
     return 0;
