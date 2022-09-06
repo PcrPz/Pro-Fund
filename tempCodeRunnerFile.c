@@ -1,1 +1,1 @@
-    scanf("%s", str);
+Sleep(500);
