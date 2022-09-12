@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char ans[100];
+    printf("Enter the string to check if it is palindrome");
+    scanf("%s", ans);
+    int strans = strlen(ans);
+    int i, j = strans - 1;
+    int z;
+
+    for (i = 0; i < strans; i++, j--)
+    {
+        if ((ans[i]) != (ans[j]))
+        {
+            z = 0;
+        }
+        else
+        {
+            z = 1;
+        }
+    }
+    if (z == 0)
+    {
+        printf("No");
+    }
+    else
+    {
+        printf("Yes");
+    }
+
+    return 0;
+}-------------
+for (*p = 0; *p < strans; *p++, *h++)
+    {
+        if (*p != *h)
+        {
+            z = 0;
+        }
+        else
+        {
+            z = 1;
+        }
+    }
+    if (z == 0)
+    {
+        printf("No");
+    }
+    else
+    {
+        printf("Yes");
+    }
+    char ans[100];
+    printf("Enter the string to check if it is palindrome\n");
+    scanf("%s", ans);
+    palindome(ans);
+
+    return 0;

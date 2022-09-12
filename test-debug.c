@@ -18,7 +18,7 @@ int main()
     }
     for (i = 0; i < strlen(str); i++)
     {
-        if ((str[i] >= 'a' && str[i] <= 'z') || (str[0] >= 'A' && str[0] <= 'Z'))
+        if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z'))
         {
             curmode = 'c';
         }
