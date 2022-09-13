@@ -56,3 +56,132 @@ for (*p = 0; *p < strans; *p++, *h++)
     palindome(ans);
 
     return 0;
+
+    
+    #include <stdio.h>
+#include <conio.h>
+#include <windows.h>
+#include <stdbool.h>
+void draw_ship(int x, int y)
+{
+
+    COORD c = {x, y};
+    SetConsoleCursorPosition(
+        GetStdHandle(STD_OUTPUT_HANDLE), c);
+    printf(" <-::1::-> ");
+   setcolor (7,0);
+}
+void erase_ship(int x, int y)
+{
+
+    COORD c = {x, y};
+    SetConsoleCursorPosition(
+        GetStdHandle(STD_OUTPUT_HANDLE), c);
+    printf("               ");
+    setcolor (2,4);
+}
+void setcursor(bool visible)
+{
+    HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
+    CONSOLE_CURSOR_INFO lpCursor;
+    lpCursor.bVisible = visible;
+    lpCursor.dwSize = 20;
+    SetConsoleCursorInfo(console, &lpCursor);
+}
+void setcolor(int fg,int bg)
+{
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleTextAttribute(hConsole, bg * 16 + fg);
+}
+int main()
+{
+    char ch = ' ';
+    int x = 38, y = 20;
+    draw_ship(x, y);
+    
+    do
+    {
+        if (_kbhit())
+        {setcursor(0);
+            ch = _getch();
+            if (ch == 'a' && x > 0)
+            {
+                erase_ship(x, y);
+                draw_ship(--x, y);
+            }
+            if (ch == 'd' && x < 100)
+            {
+                erase_ship(x, y);
+                draw_ship(++x, y);
+            }
+            if (ch == 'w' && y > 0)
+            {
+                erase_ship(x, y);
+                draw_ship(x, --y);
+            }
+            if (ch == 's' && y < 80)
+            {
+                erase_ship(x, y);
+                draw_ship(x, ++y);
+            }
+            fflush(stdin);
+        }
+        if (/* condition */)
+        {
+            /* code */
+        }
+        
+    } while (ch != 'x');
+    return 0;
+}
+
+
+
+int main()
+{
+    char ch = ' ';
+    int x = 38, y = 20;
+    draw_ship(x, y);
+    int direc;
+    do
+    {
+        if (_kbhit())
+        {
+            setcursor(0);
+            ch = _getch();
+            if (ch == 'a' && ch == 'A' && x > 0)
+            {
+                direc = 1;
+            }
+            if (ch == 'd' && ch == 'D' && x < 100)
+            {
+                direc = 2;
+            }
+            if (ch == 's' && ch == 'S' && y < 80)
+            {
+                direc = 3;
+            }
+            fflush(stdin);
+        }
+        if (direc != 0)
+        {
+            if (direc == 1 && x < 100)
+            {
+                erase_ship(x, y);
+                draw_ship(--x, y);
+            }
+            if (direc == 2 && x < 100)
+            {
+                erase_ship(x, y);
+                draw_ship(++x, y);
+            }
+            if (direc == 3 && x < 100)
+            {
+                draw_ship(x, y);
+            }
+            Sleep(100);
+        }
+
+    } while (ch != 'x');
+    return 0;
+}
