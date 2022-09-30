@@ -31,14 +31,13 @@ int main()
   printf("Enter the number of rows: ");
   scanf("%d", &row);
   printf("Enter the number of columns : ");
-  scanf("%d\n", &col);
-//ใส่เมทริก 1
-  printf("Matrix 1\n");
+  scanf("%d", &col);
+ printf("\nMatrix 1\n");
   for (i = 0; i < row; ++i)
   {
     for (j = 0; j < col; ++j)
     {
-      printf("Enter Number in Matrix1[%d][%d]: ", i, j);
+      printf("Enter Number in Matrix1[%d][%d]: ", i+ 1, j+ 1);
       scanf("%d", &Max1[i][j]);
     }
   }
@@ -48,7 +47,7 @@ int main()
   {
     for (j = 0; j < col; ++j)
     {
-      printf("Enter Number in Matrix2[%d][%d]: ", i, j);
+      printf("Enter Number in Matrix2[%d][%d]: ", i+ 1, j+ 1);
       scanf("%d", &Max2[i][j]);
     }
   }
