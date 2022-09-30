@@ -53,6 +53,7 @@ int main()
     }
   }
   // ฟังกชันคำนวณ
+  printf("Matrix Sum\n");
   sum_print(Max1, Max2,sum);
   return 0;
 }
