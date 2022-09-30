@@ -32,6 +32,7 @@ int main()
   scanf("%d", &row);
   printf("Enter the number of columns : ");
   scanf("%d", &col);
+  //ใส่เมทริก 1
  printf("\nMatrix 1\n");
   for (i = 0; i < row; ++i)
   {
