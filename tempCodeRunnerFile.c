@@ -1,1 +1,1 @@
-Matrix Sum\
+&s[i]
